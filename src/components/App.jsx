@@ -1,11 +1,18 @@
 import React, { useEffect } from 'react'
 import Login from './Login'
 import Dashboard from './Dashboard'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import { auth } from '../config/firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
 import '../styles/App.css'
 
 const App = () => {
+  const [user] = useAuthState(auth)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    { user ? navigate('/') : navigate('/login') }
+  },[user])
 
   return (
     <>
