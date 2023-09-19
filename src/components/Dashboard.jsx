@@ -1,21 +1,25 @@
 import React from 'react'
 import PrivateRoute from './PrivateRoute'
-import { useNavigate } from 'react-router-dom'
-import { auth } from '../config/firebase'
+import NavbarComponent from './NavbarComponent'
 import ImageCard from './ImageCard'
+import '../styles/Dashboard.css'
 
 const Dashboard = () => {
-  const navigate = useNavigate()
-
-  const handleClick = () => {
-      auth.signOut()
-      navigate('/login')
-  }
 
   return (
     <PrivateRoute>
-      <ImageCard />
-      <button onClick={handleClick}>Log Out</button>
+      <NavbarComponent />
+      <div className='gallery-container px-3 py-4'>
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+      </div>
     </PrivateRoute>
   )
 }

@@ -1,0 +1,16 @@
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 1200px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media only screen and (max-width: 680px) {
+    .gallery-container{
+        grid-template-columns: repeat(1, auto);
+    }
+}

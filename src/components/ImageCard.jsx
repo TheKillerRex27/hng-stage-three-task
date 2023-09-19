@@ -1,9 +1,12 @@
 import React from 'react'
 
-const ImageCard = () => {
+const ImageCard = (props) => {
     return (
         <>
-            <h1 style={{ display: 'inline-flex' }}>Drag Me!</h1>
+            <div>
+                <div style={{ backgroundColor: 'grey', width: '350px', height: '200px' }} />
+                <p>Nature, Pretty, Art</p>
+            </div>
         </>
     )
 }
