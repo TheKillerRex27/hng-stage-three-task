@@ -12,7 +12,7 @@ const NavbarComponent = () => {
   return (
     <div>
         <Navbar className='d-flex px-5 justify-content-between' bg="dark" expand="lg">
-          <Navbar.Brand href="#" className='text-white'>Gallery</Navbar.Brand>
+          <Navbar.Brand href="/" className='text-white'>Gallery</Navbar.Brand>
           <Form className='d-flex w-50'>
             <Form.Group className='w-75 mx-3'>
               <Form.Control

@@ -1,11 +1,12 @@
 import React from 'react'
+import LoadingOverlay from 'react-loading-overlay-ts'
 
 const ImageCard = (props) => {
     return (
         <>
             <div>
-                <div style={{ backgroundColor: 'grey', width: '350px', height: '200px' }} />
-                <p>Nature, Pretty, Art</p>
+                <img src={props.url} style={{ width: '350px', height: '200px' }} />
+                <p>{props.tags}</p>
             </div>
         </>
     )

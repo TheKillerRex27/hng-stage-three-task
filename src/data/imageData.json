@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "url": "https://loveincorporated.blob.core.windows.net/contentimages/gallery/08afbe0f-350d-480d-9421-57274208714e-Black_forest_germany.jpg",
+        "tags": ["nature", "forest", "pretty"]
+    },
+    {
+        "id": 2,
+        "url": "https://www.incrediblesnaps.com/wp-content/uploads/2013/12/Beautiful-Art-works-by-JeeYoung-Lee-11.jpg",
+        "tags": ["art", "pretty"]
+    },
+    {
+        "id": 3,
+        "url": "https://www.devteam.space/wp-content/uploads/2022/05/gaming-technology-trends.jpg",
+        "tags": ["gaming", "tech"]
+    },
+    {
+        "id": 4,
+        "url": "https://news.artnet.com/app/news-upload/2018/07/Main_Borderlesswaorl_takihana_2_3_high-1024x683.jpg",
+        "tags": ["tech", "art"]
+    },
+    {
+        "id": 5,
+        "url": "https://thumbs.dreamstime.com/b/pretty-cute-bedroom-futuristic-interior-design-high-tech-futuristic-bedroom-sleek-furniture-futuristic-decor-realistic-d-278955439.jpg",
+        "tags": ["pretty", "tech"]
+    },
+    {
+        "id": 6,
+        "url": "https://img.freepik.com/premium-vector/milastokerpro-astronaut-exploring-outer-space-cosmonaut-in-spa-5c3d4caef4c04577a3fc5e45dac58db2_399963-3242.jpg",
+        "tags": ["space", "art"]
+    },
+    {
+        "id": 7,
+        "url": "https://assetsio.reedpopcdn.com/atomhawk_atomhawk_games_workshop_warhammer_40000_battlebox_motion_graphics_concept_art_screenshot_02.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+        "tags": ["gaming", "art", "tech"]
+    },
+    {
+        "id": 8,
+        "url": "https://africanews.space/wp-content/uploads/2018/12/Space-Tech.jpg",
+        "tags": ["space", "tech"]
+    },
+    {
+        "id": 9,
+        "url": "https://img.freepik.com/free-photo/poster-movie-vr-neon-colors_188544-22011.jpg",
+        "tags": ["gaming", "art"]
+    }
+]

@@ -3,6 +3,7 @@ import PrivateRoute from './PrivateRoute'
 import NavbarComponent from './NavbarComponent'
 import ImageCard from './ImageCard'
 import '../styles/Dashboard.css'
+import images from '../data/imageData.json'
 
 const Dashboard = () => {
 
@@ -10,15 +11,9 @@ const Dashboard = () => {
     <PrivateRoute>
       <NavbarComponent />
       <div className='gallery-container px-3 py-4'>
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
+        { images.map((image) => (
+          <ImageCard key={image.id} url={image.url} tags={image.tags.join(', ')} />
+        )) }
       </div>
     </PrivateRoute>
   )
