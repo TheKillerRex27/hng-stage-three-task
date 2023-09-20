@@ -9,9 +9,11 @@ const ImageCard = (props) => {
     id: props.id,
   });
 
+
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
+    cursor: 'move',
   };
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const ImageCard = (props) => {
   return (
     <>
       <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
-        <LoadingOverlay active={loading} spinner text={'Loading...'}>
+        <LoadingOverlay active={loading} spinner text={'Signing In'}>
           <img src={props.url} style={{ width: '350px', height: '200px' }} />
         </LoadingOverlay>
         <p>{props.tags}</p>

@@ -3,7 +3,7 @@ import PrivateRoute from './PrivateRoute'
 import NavbarComponent from './NavbarComponent'
 import ImageCard from './ImageCard'
 import { Button } from 'react-bootstrap';
-import { DndContext } from '@dnd-kit/core';
+import { DndContext, useSensor, useSensors, MouseSensor, TouchSensor } from '@dnd-kit/core';
 import { arrayMove, SortableContext } from '@dnd-kit/sortable';
 import images from '../data/imageData.json'
 import '../styles/Dashboard.css'
@@ -11,6 +11,20 @@ import '../styles/Dashboard.css'
 const Dashboard = (props) => {
   const [imagesArr, setImagesArr] = useState(images)
   const [searchQuery, setSearchQuery] = useState('')
+
+  const sensors = useSensors(
+    useSensor(MouseSensor, {
+      activationConstraint: {
+        distance: 10,
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        delay: 100,
+        tolerance: 5,
+      },
+    })
+  )
 
   const filteredImages = images.filter(image =>
     image.tags.includes(searchQuery)
@@ -35,7 +49,10 @@ const Dashboard = (props) => {
   return (
     <PrivateRoute>
       <NavbarComponent setSearchQuery={setSearchQuery} />
-      <DndContext onDragEnd={handleDragEnd}>
+      <DndContext 
+        sensors={sensors}
+        onDragEnd={handleDragEnd}
+      >
         <SortableContext items={imagesArr}>
           <div className='gallery-container px-3 py-4'>
             {!searchQuery ? (
