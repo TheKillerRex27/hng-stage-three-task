@@ -4,6 +4,13 @@
     justify-content: space-around;
 }
 
+.button-container {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 1200px) {
     .gallery-container {
         grid-template-columns: repeat(2, auto);
