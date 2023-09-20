@@ -1,5 +1,6 @@
 .gallery-container {
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(3, auto);
     justify-content: space-around;
 }
