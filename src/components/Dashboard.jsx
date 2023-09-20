@@ -23,7 +23,7 @@ const Dashboard = (props) => {
         delay: 100,
         tolerance: 5,
       },
-    })
+    }) 
   )
 
   const filteredImages = images.filter(image =>

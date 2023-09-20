@@ -7,7 +7,7 @@ const NavbarComponent = ({ setSearchQuery }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setSearchQuery(searchInput);
+    setSearchQuery(searchInput.toLowerCase());
   };
 
   const handleClick = () => {

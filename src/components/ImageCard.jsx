@@ -19,7 +19,7 @@ const ImageCard = (props) => {
   useEffect(() => {
     const simulateLoading = setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1500);
 
     return () => {
       clearTimeout(simulateLoading);
@@ -29,7 +29,7 @@ const ImageCard = (props) => {
   return (
     <>
       <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
-        <LoadingOverlay active={loading} spinner text={'Signing In'}>
+        <LoadingOverlay active={loading} spinner text={'Loading...'}>
           <img src={props.url} style={{ width: '350px', height: '200px' }} />
         </LoadingOverlay>
         <p>{props.tags}</p>
