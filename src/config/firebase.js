@@ -1,13 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth'
 
+const env = import.meta.env
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBiPYhqUN9HW1rkOQQzegld8TSQp5fld3I",
-  authDomain: "stage-three-project.firebaseapp.com",
-  projectId: "stage-three-project",
-  storageBucket: "stage-three-project.appspot.com",
-  messagingSenderId: "35068999579",
-  appId: "1:35068999579:web:e8b62c6046cc8a14cc133e"
+  apiKey: env.VITE_FIREBASE_API_KEY,
+  authDomain: env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: env.VITE_FIREBASE_MESSAGEING_SENDER_ID,
+  appId: env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);

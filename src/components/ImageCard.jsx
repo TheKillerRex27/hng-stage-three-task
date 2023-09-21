@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LoadingOverlay from 'react-loading-overlay-ts';
 import { useSortable } from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
+import '../styles/ImageCard.css'
 
 const ImageCard = (props) => {
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ const ImageCard = (props) => {
         <LoadingOverlay active={loading} spinner text={'Loading...'}>
           <img src={props.url} style={{ width: '350px', height: '200px' }} />
         </LoadingOverlay>
-        <p>{props.tags}</p>
+        <p className='tags'>Tags: {props.tags}</p>
       </div>
     </>
   );
